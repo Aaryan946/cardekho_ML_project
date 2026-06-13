@@ -4,7 +4,7 @@ import streamlit as st
 from groq import Groq
 import os
 
-client = Groq(api_key=("GROQ_API_KEY"))
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 st.title("AI Chatbot")
 user_input=st.text_input("Ask something:")
 if st.button("Send"):
